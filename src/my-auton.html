@@ -1,0 +1,86 @@
+i<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/iron-form/iron-form.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="imporT" href="../bower_components/paper-radio-button/paper-radio-button.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+
+<dom-module id="my-auton">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+    </style>
+    <div class="card">
+      <div class="rectangle">Auton</div>  
+      <div>
+        <iron-form id="form1">
+            <form method = "get" action="/form/handler">
+                <paper-input always-float-label align="center" label="Match Number: "></paper-input>   
+                <paper-input always-float-label align="center" label="Team: "></paper-input>                
+            <iron-label for="groundpickup">
+                Ground Pickup? &nbsp;&nbsp;&nbsp;
+            </iron-label>
+                <iron-selector id="groundpickup" attr-for-selected="gpick" selected-attribute="checked">
+                    <paper-checkbox name="Gears">Gears &nbsp;</paper-checkbox>
+                    <paper-checkbox name="Fuel">Fuel &nbsp; </paper-checkbox>
+                    <paper-checkbox name="None">None &nbsp; </paper-checkbox>
+                </iron-selector>
+            <br>
+            <iron-label for="fscore">
+                Fuel Scoring Capability &nbsp;&nbsp;&nbsp;
+            </iron-label>
+                <iron-selector id="fscore" attr-for-selected="type" selected-attribute="checked">
+                    <paper-checkbox name="High">High &nbsp;</paper-checkbox>
+                    <paper-checkbox name="Low">Low &nbsp;</paper-checkbox>
+                    <paper-checkbox name="None">None &nbsp;</paper-checkbox>
+                </iron-selector>
+            </form>
+        </iron-form>
+        <hr>
+        <h4> Autonomous </h4>
+        <iron-form id="form2">
+            <form method = "get" action="/form/handler">
+            <iron-label>
+                Crossed the green line?
+            </iron-label>
+            <paper-button text="yes">Yes</paper-button>
+            <paper-button text="no">No</paper-button>
+           
+            <br>
+            <iron-label for = "success">
+                Successful Gear?
+            </iron-label>
+                <paper-radio-group selected="success" aria-labelledby="successs">
+                    <paper-radio-button name="y"> Yes &nbsp; </paper-radio-button>
+                    <paper-radio-button name="nobutattempted"> No, attempted to </paper-radio-button>
+                    <paper-radio-button name="noattempt"> No, didn't try </paper-radio-button>
+                </paper-radio-group>
+
+            </form>
+        </iron-form>
+    </div>
+  </template>
+
+  <script>
+    class MyAuton extends Polymer.Element {
+      static get is() { return 'my-auton'; }
+    }
+
+    window.customElements.define(MyAuton.is, MyAuton);
+  </script>
+</dom-module>
