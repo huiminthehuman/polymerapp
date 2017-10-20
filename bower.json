@@ -19,7 +19,11 @@
     "iron-form": "PolymerElements/iron-form#^2.0.1",
     "paper-input": "PolymerElements/paper-input#^2.0.2",
     "paper-radio-button": "PolymerElements/paper-radio-button#^2.0.0",
-    "paper-button": "PolymerElements/paper-button#^2.0.0"
+    "paper-button": "PolymerElements/paper-button#^2.0.0",
+    "paper-radio-group": "PolymerElements/paper-radio-group#^2.0.0",
+    "toggle-icon": "^1.2.1",
+    "iron-icons": "PolymerElements/iron-icons#^2.0.1",
+    "paper-number-input": "Zecat/paper-number-input#^1.0.0"
   },
   "resolutions": {
     "polymer": "^2.0.0"
