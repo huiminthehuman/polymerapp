@@ -31,23 +31,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <div class="card">
     <div class="rectangle">Get Data</div>
     <div>
-    <iron-form id="form3"
-       <form method = "get" action="/form/handler">
+    <form id="form3">
             <paper-input always-float-label align="center" label="Team Number:"></paper-input>
             <paper-input always-float-label align="center" label="Match Number:"></paper-input>
             <br>
-       <paper-dropdown-menu label="What Competition?">
-  <paper-listbox slot="dropdown-content" class="dropdown-content" selected="0">
+            <div class="rectangle"> What competition? </div>
+
+  <paper-listbox slot="dropdown-content" selected="1">
     <paper-item id="brunswick">Brunswick Eruption</paper-item>
     <paper-item id="florida">Florida</paper-item>
     <paper-item id="st.louis">St.Louis</paper-item>
     <paper-item id="newyork">New York</paper-item>
     <paper-item id="pennsylvania">Pennsylvania: Ramp Riot</paper-item>
   </paper-listbox>
-</paper-dropdown-menu>
-<paper-button raised> Submit </paper-button>
+  <br>
 </form>
-</iron-form>
+<paper-button raised> Submit </paper-button>
     </div>
   </template>
 

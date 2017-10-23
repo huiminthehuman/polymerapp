@@ -34,14 +34,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         --toggle-icon-checked: {
             color: var(--paper-red-500);
         };
-      }   
+      }
     </style>
     <div class="card">
-      <div class="rectangle">Auton</div>  
+      <div class="rectangle">Auton</div>
       <div>
       <form method = "get" action="/form/handler" id="auton">
-          <paper-input always-float-label align="center" label="Match Number: "></paper-input>   
-          <paper-input always-float-label align="center" label="Team: "></paper-input>                
+          <paper-input always-float-label align="center" label="Match Number: "></paper-input>
+          <paper-input always-float-label align="center" label="Team: "></paper-input>
       <iron-label for="groundpickup">
           Ground Pickup? &nbsp;&nbsp;&nbsp;
       </iron-label>
@@ -66,7 +66,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           </iron-label>
           <toggle-icon required=true icon="icons:thumb-up" animation="flip-vertical" class="green-red"></toggle-icon>
           <br>
-          
+
           <iron-label for = "successgr">
               Successful Gear?
           </iron-label>
@@ -86,16 +86,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                  <paper-radio-button name="bp"> Boiler Peg </paper-radio-button>
                  <paper-radio-button name="none"> None </paper-radio-button>
              </paper-radio-group>
-             <br>
-             <br>
-            <paper-button raised> Submit </paper-button>
          <paper-number-input
          label = " Fuel Scored (kPa) "
          min = "0"
          value = "0"
          step = "1"
          fallback-value = "0"
-         > 
+         >
          </paper-number-input>
          <br>
          <paper-number-input
@@ -106,6 +103,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
          fallback-value = "0"
          >
          </paper-number-input>
+         <paper-button raised> Submit </paper-button>
      </form>
     <div>
   </template>
