@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>paper-number-input demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../../paper-input/paper-input.html">
+    <link rel="import" href="../../iron-flex-layout/iron-flex-layout.html">
+    <link rel="import" href="../../paper-checkbox/paper-checkbox.html">
+    <link rel="import" href="../paper-number-input.html">
+  </head>
+
+  <body>
+
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+      </style>
+    </custom-style>
+
+    <div class="vertical-section-container centered">
+
+      <demo-snippet>
+        <template>
+
+          <dom-bind id="scope">
+            <template>
+
+            <!--
+              For icons to appear, you can:
+               - just import the iron-icons/iron-icons.html Polymer element,
+               - create your own icon set and specify `stepDownIcon` and `stepUpIcon` properties according.
+               - import paper-number-input/paper-number-input-icons and define
+                  `stepDownIcon` as 'integer-input:step-down' and `stepUpIcon` as 'integer-input:step-up'
+            -->
+              <link rel="import" href="../../iron-icons/iron-icons.html">
+              <link rel="import" href="../../polymer/lib/elements/custom-style.html">
+
+              <custom-style>
+                <style>
+                  paper-number-input {
+                    max-width: 150px;
+                    margin: auto;
+                  }
+                </style>
+              </custom-style>
+
+              <paper-input
+                label="Label"
+                value="{{label}}"
+              ></paper-input>
+
+              <paper-input
+                type="number"
+                label="min"
+                value="{{min}}"
+              ></paper-input>
+
+              <paper-input
+                type="number"
+                label="max"
+                value="{{max}}"
+              ></paper-input>
+
+              <paper-input
+                type="number"
+                label="Value"
+                value="{{value}}"
+              ></paper-input>
+
+              <paper-input
+                type="number"
+                label="Step"
+                value="{{step}}"
+              ></paper-input>
+
+              <paper-input
+                type="number"
+                label="Fallback value"
+                value="{{fallbackValue}}"
+              ></paper-input>
+
+              <paper-checkbox
+                checked="{{disabled}}"
+              >Disabled</paper-checkbox>
+
+              <paper-checkbox
+                checked="{{alwaysFloatLabel}}"
+              >Always label float</paper-checkbox>
+
+              <paper-number-input
+                always-float-label="{{alwaysFloatLabel}}"
+                label="[[label]]"
+                min="[[min]]"
+                max="[[max]]"
+                value="{{value}}"
+                disabled="[[disabled]]"
+                step="{{step}}"
+                fallback-value="[[fallbackValue]]"
+              >
+                <!--
+                  <div slot="prefix"></div>
+                  <div slot="suffix"></div>
+                -->
+              </paper-number-input>
+
+              <script>
+                var scope = document.getElementById('scope');
+
+                scope.label = 'Number';
+                scope.min = 1;
+                scope.max = 10;
+                scope.value = 5;
+                scope.fallbackValue = 0;
+                scope.alwaysFloatLabel = true;
+              </script>
+
+            </template>
+          </dom-bind>
+
+        </template>
+      </demo-snippet>
+
+    </div>
+
+  </body>
+</html>
