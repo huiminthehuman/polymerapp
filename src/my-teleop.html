@@ -12,6 +12,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/iron-form/iron-form.html">
 <link rel="import" href="../bower_components/paper-input/paper-input.html">
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-input/paper-textarea.html">
+<link rel="import" href="../bower_components/toggle-icon/toggle-icon.html">
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-teleop">
@@ -21,6 +23,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         display: block;
         padding: 10px;
       }
+  }
     </style>
 
     <div class="card">
@@ -34,19 +37,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <iron-label>
                 Climb?
             </iron-label>
-            <paper-button text="yes">Yes</paper-button>
-            <paper-button text="no">No</paper-button>
+            <toggle-icon icon="icons:thumb-up" animation="flip-vertical" class="green-red"></toggle-icon>
             <br>
             <iron-label>
             Yellow Card?
             	</iron-label>
-            <paper-button text="yes">Yes</paper-button>
-            <paper-button text="no">No</paper-button>   
+            <toggle-icon icon="icons:thumb-up" animation="flip-vertical" class="green-red"></toggle-icon>
             <br>
-            <h4>Comments</h4>
-            <p> Please note in the comments how the robot behaved on the field
-Make sure to note if robot was not functional or repeatedly incurred fouls </p>
-            <paper-input always-float-label align="center" label="Comments:"></paper-input>
+            <br>
+            <div class="rectangle">Comments:</div>
+            <paper-textarea always-float-label label="Please note in the comments how the robot behaved on the field. 
+		    Make sure to note if robot was not functional or repeatedly incurred fouls."> </paper-textarea>
+            <br>
+            <paper-button raised> Submit </paper-button>
             </form>
             </iron-form>
     </div>

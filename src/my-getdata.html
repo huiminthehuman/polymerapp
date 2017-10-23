@@ -1,0 +1,61 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-getdata">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+    </style>
+
+    <div class="card">
+      <div class="card">
+    <div class="rectangle">Get Data</div>
+    <div>
+    <iron-form id="form3"
+       <form method = "get" action="/form/handler">
+            <paper-input always-float-label align="center" label="Team Number:"></paper-input>
+            <paper-input always-float-label align="center" label="Match Number:"></paper-input>
+            <br>
+       <paper-dropdown-menu label="What Competition?">
+  <paper-listbox slot="dropdown-content" class="dropdown-content" selected="0">
+    <paper-item id="brunswick">Brunswick Eruption</paper-item>
+    <paper-item id="florida">Florida</paper-item>
+    <paper-item id="st.louis">St.Louis</paper-item>
+    <paper-item id="newyork">New York</paper-item>
+    <paper-item id="pennsylvania">Pennsylvania: Ramp Riot</paper-item>
+  </paper-listbox>
+</paper-dropdown-menu>
+<paper-button raised> Submit </paper-button>
+</form>
+</iron-form>
+    </div>
+  </template>
+
+  <script>
+    class MyGetData extends Polymer.Element {
+      static get is() { return 'my-getdata'; }
+    }
+
+    window.customElements.define(MyGetData.is, MyGetData);
+  </script>
+</dom-module>
