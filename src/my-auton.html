@@ -17,6 +17,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../bower_components/toggle-icon/toggle-icon.html">
 <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-number-input/paper-number-input.html">
 
 <dom-module id="my-auton">
   <template>
@@ -88,7 +89,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
              <br>
              <br>
             <paper-button raised> Submit </paper-button>
-      </form>
+         <paper-number-input
+         label = " Fuel Scored (kPa) "
+         min = "0"
+         value = "0"
+         step = "1"
+         fallback-value = "0"
+         > 
+         </paper-number-input>
+         <br>
+         <paper-number-input
+         label = " Hoppers Triggered "
+         min = "0"
+         value = "0"
+         step = "1"
+         fallback-value = "0"
+         >
+         </paper-number-input>
+     </form>
     <div>
   </template>
 
