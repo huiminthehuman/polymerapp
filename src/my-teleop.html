@@ -25,14 +25,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         display: block;
         padding: 10px;
       }
-  }
+      .green-red {
+        --toggle-icon: {
+            color: var(--paper-green-500);
+        };
+        --toggle-icon-checked: {
+            color: var(--paper-red-500);
+        };
+      }
     </style>
 
     <div class="card">
     <div class="rectangle">Teleop</div>
     <div>
-    <iron-form id="form2"
-       <form method = "get" action="/form/handler">
+    <form method = "get" action="/form/handler">
             <paper-number-input always-float-label align="center" label="Gears Scored:" min = "0"
             value = "0" step = "1" fallback-value = "0" ></paper-number-input>
             <paper-number-input always-float-label align="center" label="Gears Dropped:" min = "0"
@@ -57,7 +63,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <br>
             <paper-button raised> Submit </paper-button>
             </form>
-            </iron-form>
     </div>
   </template>
 
