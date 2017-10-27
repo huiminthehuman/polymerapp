@@ -35,6 +35,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         };
       }
     </style>
+
     <div class="card">
       <div class="rectangle">Auton</div>
       <div>
@@ -105,7 +106,39 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
          <paper-button raised> Submit </paper-button>
      </form>
     <div>
-  </template>
+	
+    <div class="card">
+    <div class="rectangle">Teleop</div>
+    <div>
+    <form method = "get" action="/form/handler">
+            <paper-number-input always-float-label align="center" label="Gears Scored:" min = "0"
+            value = "0" step = "1" fallback-value = "0" ></paper-number-input>
+            <paper-number-input always-float-label align="center" label="Gears Dropped:" min = "0"
+            value = "0" step = "1" fallback-value = "0" ></paper-number-input>
+            <paper-number-input always-float-label align="center" label="Fuel Scored:" min = "0"
+            value = "0" step = "1" fallback-value = "0" ></paper-number-input>
+            <br>
+            <iron-label>
+                Climb?
+            </iron-label>
+            <toggle-icon required=true icon="icons:thumb-up" animation="flip-vertical" class="green-red"></toggle-icon>
+            <br>
+            <iron-label>
+            Yellow Card?
+            	</iron-label>
+            <toggle-icon required=true icon="icons:thumb-up" animation="flip-vertical" class="green-red"></toggle-icon>
+            <br>
+            <br>
+            <div class="rectangle"><b>Comments:</div></b>
+            <paper-textarea always-float-label label="Please note in the comments how the robot behaved on the field.
+		    Make sure to note if robot was not functional or repeatedly incurred fouls."> </paper-textarea>
+            <br>
+            <paper-button raised> Submit </paper-button>
+            </form>
+    </div>
+ 	
+
+</template>
 
   <script>
     class MyAuton extends Polymer.Element {
